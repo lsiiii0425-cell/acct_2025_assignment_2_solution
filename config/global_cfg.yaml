@@ -1,0 +1,37 @@
+# 1. 项目名称 (改成你的作业名)
+project_name: assignment2_germany_pb_roa
+
+# 2. 时间范围 (这是最重要的！一定要加上，否则代码读不到年份)
+time_range:
+  start: "2023-01-01"
+  end: "2023-12-31"
+
+# 3. 输出文件的名字 (生成的 PDF 报告叫什么)
+output_paper: output/assignment2_report.pdf
+output_presentation: output/assignment2_presentation.pdf
+
+# 4. 账号密码文件 (保持不变)
+secrets_file: secrets.env
+
+# 日志设置 (保持不变)
+log_level: info
+log_file: stdout
+
+# 5. 外部数据路径 (把你的 ISIN 名单注册在这里)
+# 原来的 Fama French 行业数据你暂时用不到，可以留着也可以删掉
+prime_standard_isins: data/external/isin_list.csv
+
+# 6. 中间数据文件 (下载下来的数据存哪里)
+# 咱们不研究美国(cstat_us)，改个名字叫 worldscope_de
+wrds_raw_data: data/pulled/worldscope_de.parquet
+processed_data: data/generated/analysis_data.parquet
+
+# 语言相关的结果文件 (保持不变)
+results_python: output/results.pickle
+results_r: output/results.rda
+
+# Quarto 文档路径 (保持不变)
+paper_python: paper/paper_python.qmd
+paper_r: paper/paper_r.qmd
+presentation_python: paper/presentation_python.qmd
+presentation_r: paper/presentation_r.qmd
